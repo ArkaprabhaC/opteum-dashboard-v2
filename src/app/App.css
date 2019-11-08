@@ -1,0 +1,59 @@
+.head{
+    background-color: #fff;
+position:fixed;
+z-index: 1;
+width: 100%;
+border-bottom: 1px solid #D3D3D3;
+}
+
+.sidebar{
+    overflow: auto;
+    height: 90vh;
+    margin-top: 64px;
+    position: fixed;
+    left: 0;
+    border-right: 1px solid #D3D3D3;
+    background-color:#fff;
+}
+
+.user-img{
+    height: 90px;
+    width: auto;
+    display:block;
+    margin:0 auto
+}
+
+.content_main{
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: red;
+    position: fixed;
+}
+
+
+/*
+* Tabbed Component primary styles
+*/
+
+.card-container-primary > .ant-tabs-card > .ant-tabs-content {
+    margin-top: -16px;
+  }
+.card-container-primary > .ant-tabs-card > .ant-tabs-content > .ant-tabs-tabpane {
+    background: #fff;
+    padding: 16px;
+  }
+  
+  .card-container-primary > .ant-tabs-card > .ant-tabs-bar {
+    border-color: #fff;
+  }
+  
+  .card-container-primary > .ant-tabs-card > .ant-tabs-bar .ant-tabs-tab {
+    border-color: transparent;
+    background: transparent;
+  }
+  
+  .card-container-primary > .ant-tabs-card > .ant-tabs-bar .ant-tabs-tab-active {
+    border-color: #fff;
+    background: #fff;
+  }
