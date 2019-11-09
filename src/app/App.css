@@ -1,6 +1,9 @@
 *{
   font-family: 'Open Sans', sans-serif;
 }
+.content_layout_container{
+  margin-left: 230px;
+}
 .sidebar{
     overflow: auto;
     height: 100vh;
@@ -82,3 +85,16 @@
 /*
 * Tabbed component styles end
 */
+
+@media screen and (max-width:500px){
+  .content_layout_container{
+    margin-left:0px;
+  }
+  .greeter h4{
+    text-align:left;
+  }
+  .strategy_tracker{
+    padding:0px;
+    margin-top: 20px;
+  }
+}

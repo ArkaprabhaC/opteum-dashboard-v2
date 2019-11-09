@@ -18,7 +18,7 @@ class App extends Component{
             <Layout style={{boxSizing: "border-box"}}>
                 <CustomMenu/>
                 <Layout>
-                    <Sider className="sidebar" width="230px" style={{paddingTop: "18px"}}>
+                    <Sider className="sidebar" breakpoint="md" collapsedWidth="0" width="230px" style={{paddingTop: "18px"}}>
                         <div>
                             <Row>
                                 <Col md={12}><img src={avatar} className="user-img" /></Col>
@@ -36,7 +36,7 @@ class App extends Component{
                         </Menu>
 
                     </Sider>
-                    <Layout style={{"marginLeft": "230px"}}>
+                    <Layout className="content_layout_container">
                         <Content> 
                             <div className="main_content">
                                 <Row>

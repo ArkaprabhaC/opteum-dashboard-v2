@@ -1,13 +1,14 @@
 import React, {Component, Fragment} from 'react'
-import { Menu, Button, Drawer } from 'antd';
+import { Menu, Button, Drawer,Icon } from 'antd';
 import 'antd/dist/antd.css';
 
 import './CustomMenu.css';
 
 class CustomMenu extends Component {
     state = {
-        visible: false
-      }
+        visible: false,
+        width: window.innerWidth
+    }
     showDrawer = () => {
         this.setState({
           visible: true,
@@ -32,7 +33,33 @@ class CustomMenu extends Component {
             </Menu>
         )
     }
+    componentDidMount() {
+        window.addEventListener('resize', this.handleWindowSizeChange);
+    }
+    
+    handleWindowSizeChange = () => {
+        this.setState({ width: window.innerWidth });
+    };
+
     render(){
+        const { width } = this.state;
+        const isMobile = width <= 500;
+        const options = ['Sign Out','Dashboard','Profile', 'Performance Reporting', 'Support'];
+        const optionsMob = ['dashboard','compass', 'fund'];
+        let markup;
+
+        if(isMobile){
+            markup = optionsMob.map((el,index)=>{
+                return <Menu.Item key={index+'_mob'}><Icon style={{fontSize: "20px",margin: 0}} type={el} theme="twoTone" /></Menu.Item>
+            })
+        }else{
+            markup = options.map((el,index)=>{
+                return (el === "Sign Out")? 
+                    <Menu.Item key={index} style={{float: "right"}}><strong>{el}</strong></Menu.Item>
+                    : <Menu.Item key={index} style={{float: "right"}}>{el}</Menu.Item>
+            });
+        }
+
         return(
             <Fragment>
                 <Menu 
@@ -41,18 +68,14 @@ class CustomMenu extends Component {
                     selectedkeys="1"
                     style={{lineHeight:"50px", paddingRight: "20px", position:"fixed"}}
                 >
-                    <Menu.Item key="1" style={{float:"right"}}><strong>Sign Out</strong></Menu.Item>
-                    <Menu.Item key="2" style={{float:"right"}}>Dashboard</Menu.Item>
-                    <Menu.Item key="3" style={{float:"right"}}>Profile</Menu.Item>
-                    <Menu.Item key="4" style={{float:"right"}}>Performance Reporting</Menu.Item>
-                    <Menu.Item key="5" style={{float:"right"}}>Support</Menu.Item>
+                   {markup}
                                     
                 </Menu>
                 <Button className="barsMenu" type="primary" onClick={this.showDrawer}>
                     Menu
                 </Button>
                 <Drawer
-                    title="Sigmanteum TM"
+                    title="Opteum TM"
                     placement="right"
                     closable={false}
                     onClose={this.onClose}

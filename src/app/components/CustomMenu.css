@@ -28,18 +28,14 @@
     .barsMenu{
         display: block;
     }
-    .fullScreenNav{
-        display: none;
-    }
+    
     .ant-menu-vertical{
         border-right: none;
         
     }
 }
 @media screen and (max-width:319px){
-    .fullScreenNav{
-        display:none;
-    }
+    
     .barsMenu{
         display: block;
     }
