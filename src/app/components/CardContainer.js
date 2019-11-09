@@ -8,7 +8,15 @@ const CardContainer = (props)=>{
 
     //level1 tab: props.selected_level1
     //level2 tab: props.selected_level2
-
+    const style = {
+      result_cards:{
+        height: "calc(100vh-150px)", 
+        fallbacks:["-moz-calc(100vh-150px)", 
+        "-webkit-calc(100vh-150px)",
+        ]
+      }
+     
+    }
     let dataSource = {
         d1:[
             {

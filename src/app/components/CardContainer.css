@@ -3,11 +3,14 @@
 *  Card styles
 */
 
-
-.card_container{
-    margin-bottom: 20px;
+.ant-layout-content{
+    height: 100vh;
 }
-  
+.result_cards{
+  overflow-y: auto;
+  height:calc(100vh - 220px);
+}
+
   /*
   * Card styles end
   */

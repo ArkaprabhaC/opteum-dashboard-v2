@@ -1,41 +1,63 @@
-.head{
-    background-color: #fff;
-position:fixed;
-z-index: 1;
-width: 100%;
-border-bottom: 1px solid #D3D3D3;
+*{
+  font-family: 'Open Sans', sans-serif;
 }
-
 .sidebar{
     overflow: auto;
-    height: 90vh;
-    margin-top: 64px;
+    height: 100vh;
+    margin-top: 50px;
     position: fixed;
     left: 0;
     border-right: 1px solid #D3D3D3;
     background-color:#fff;
 }
 
-.user-img{
+.user-img{  /*DELETE IF NOT NEEDED*/
     height: 90px;
     width: auto;
     display:block;
     margin:0 auto
 }
 
-.content_main{
-    max-width: 500px;
-    width: 100%;
-    margin: 0 auto;
-    background-color: red;
-    position: fixed;
+.main_content{
+  max-width: 1200px;
+  width: 100%;
+  margin: 64px auto 0 auto;
+  height:calc(100vh-64px);
+  padding:10px 25px 0 25px;
+}
+.greeter h2{
+  color: #000;
+  font-weight: 600;
+}
+.greeter h2 span{
+  color: #33ff00;
+}
+.greeter h4{
+  padding:6px;
+  text-align:right;
 }
 
+/*
+* Strategy Tracker
+*/
+.strategy_tracker{
+  padding:30px;
+}
+.strategy_tracker main {
+  background-color: #fff;
+  border-radius:5px;
+}
+.strategy_tracker > main > p{
+  padding:20px;
+  border-bottom:1px solid #D3D3D3;
+}
+/*
+* Strategy Tracker End
+*/
 
 /*
 * Tabbed Component primary styles
 */
-
 .card-container-primary > .ant-tabs-card > .ant-tabs-content {
     margin-top: -16px;
   }
@@ -57,3 +79,6 @@ border-bottom: 1px solid #D3D3D3;
     border-color: #fff;
     background: #fff;
   }
+/*
+* Tabbed component styles end
+*/

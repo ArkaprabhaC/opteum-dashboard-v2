@@ -9,7 +9,7 @@ import CustomMenu from './components/CustomMenu';
 import { Tabs } from 'antd';
 
 const { TabPane } = Tabs;
-const { Header, Sider, Content } = Layout;
+const {  Sider, Content, Footer } = Layout;
 
 class App extends Component{
 
@@ -28,7 +28,7 @@ class App extends Component{
 
                         <Menu
                             defaultSelectedKeys={['2']}
-                            style={{ lineHeight: '64px'}}
+                            style={{ lineHeight: '60px'}}
                         >
                             <Menu.Item key="1">Dashboard</Menu.Item>
                             <Menu.Item key="2">Profile</Menu.Item>
@@ -38,13 +38,13 @@ class App extends Component{
                     </Sider>
                     <Layout style={{"marginLeft": "230px"}}>
                         <Content> 
-                            <div style={{maxWidth: "1200px", width: "100%", margin: "64px auto 0 auto",height:"90vh", padding:"10px 25px"}}>
+                            <div className="main_content">
                                 <Row>
                                     <Col md={14} className="card_container"> 
                                         
-                                        <Row>
-                                            <Col sm={10}><h2 style={{color: "#f77700"}}>Welcome Arkaprabha</h2></Col>
-                                            <Col sm={14}><h4 style={{padding:"9px",textAlign:"right"}}>5 November 2019 | Data updated at: <strong>22:30</strong></h4></Col>
+                                        <Row className="greeter">
+                                            <Col sm={10}><h2>Welcome, <span>Arkaprabha</span></h2></Col>
+                                            <Col sm={14}><h4>5 November 2019 | Data updated at: <strong>22:30</strong></h4></Col>
                                         </Row>
                                        
                                         <div className="card-container-primary">
@@ -59,17 +59,16 @@ class App extends Component{
                                         </div>                                        
 
                                     </Col>
-                                    <Col md={10} className="strategy_tracker" style={{padding:"30px"}}>
+                                    <Col md={10} className="strategy_tracker">
                                         
-                                        <main style={{backgroundColor: "#fff", height: "75vh", position:"fixed", width:"30%", borderRadius:"5px"}}>
-                                            <p style={{padding:"20px",borderBottom:"1px solid #D3D3D3"}}>Live Strategy Tracker</p>
+                                        <main>
+                                            <p>Live Strategy Tracker</p>
                                         </main>
 
                                     </Col>
                                 </Row>
                             </div>
-                        </Content>
-                        
+                        </Content>                        
                     </Layout>
                 </Layout>
                 

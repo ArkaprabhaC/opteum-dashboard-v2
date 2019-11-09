@@ -1,7 +1,6 @@
 import React, {Component, Fragment} from 'react'
-import { Menu, Button, Drawer, Dropdown, Icon } from 'antd';
+import { Menu, Button, Drawer } from 'antd';
 import 'antd/dist/antd.css';
-import avatar from '../../assets/avatar2.png';
 
 import './CustomMenu.css';
 
@@ -40,12 +39,13 @@ class CustomMenu extends Component {
                     mode="horizontal"
                     className="fullScreenNav"
                     selectedkeys="1"
-                    style={{lineHeight:"62px", paddingRight: "20px", position:"fixed"}}
+                    style={{lineHeight:"50px", paddingRight: "20px", position:"fixed"}}
                 >
-                    <Menu.Item key="0" style={{float:"right"}}><strong>Sign Out</strong></Menu.Item>
+                    <Menu.Item key="1" style={{float:"right"}}><strong>Sign Out</strong></Menu.Item>
                     <Menu.Item key="2" style={{float:"right"}}>Dashboard</Menu.Item>
                     <Menu.Item key="3" style={{float:"right"}}>Profile</Menu.Item>
                     <Menu.Item key="4" style={{float:"right"}}>Performance Reporting</Menu.Item>
+                    <Menu.Item key="5" style={{float:"right"}}>Support</Menu.Item>
                                     
                 </Menu>
                 <Button className="barsMenu" type="primary" onClick={this.showDrawer}>
@@ -64,8 +64,9 @@ class CustomMenu extends Component {
                             <Menu.Item key="1">Dashboard</Menu.Item>
                             <Menu.Item key="2">Profile</Menu.Item>
                             <Menu.Item key="3">Performance Reporting</Menu.Item>
+                            <Menu.Item key="4">Support</Menu.Item>
                             <Menu.Divider/>
-                            <Menu.Item key="4"><strong>Sign Out</strong></Menu.Item>
+                            <Menu.Item key="5"><strong>Sign Out</strong></Menu.Item>
                                             
                         </Menu>
                 </Drawer>
