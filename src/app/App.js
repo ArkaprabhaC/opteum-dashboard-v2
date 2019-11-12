@@ -8,6 +8,7 @@ import { Tabs } from 'antd';
 import Recommendations from './components/recommendations';
 import Watcher from './components/strategy-watcher';
 import {connect} from 'react-redux';
+import Trends from './components/trend-watcher';
 
 const { TabPane } = Tabs;
 const {  Sider, Content, Footer } = Layout;
@@ -27,7 +28,7 @@ class App extends Component{
                     )
                 case 2:
                     return (
-                        <Recommendations/>
+                        <Trends/>
                     )
             }
         }else{
@@ -50,8 +51,7 @@ class App extends Component{
                 <CustomMenu/>
                 <Layout>
                     <Sider className="sidebar" breakpoint="md" collapsedWidth="0" width="230px" style={{paddingTop: "18px"}}>
-                        
-
+                        <Trends/>
                     </Sider>
                     <Layout className="content_layout_container">
                         <Content> 

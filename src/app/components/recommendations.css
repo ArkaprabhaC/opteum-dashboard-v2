@@ -37,3 +37,10 @@
 /*
 * Tabbed component styles end
 */
+
+@media screen and (max-width: 600px){
+  .greeter h4{
+    text-align: left;
+    padding-left: 0px;
+  }
+}
