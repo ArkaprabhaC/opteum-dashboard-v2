@@ -24,21 +24,11 @@
 .main_content{
   max-width: 1200px;
   width: 100%;
-  margin: 64px auto 0 auto;
+  margin: 55px auto 0 auto;
   height:calc(100vh-64px);
   padding:10px 25px 0 25px;
 }
-.greeter h2{
-  color: #000;
-  font-weight: 600;
-}
-.greeter h2 span{
-  color: #33ff00;
-}
-.greeter h4{
-  padding:6px;
-  text-align:right;
-}
+
 
 /*
 * Strategy Tracker
@@ -58,33 +48,7 @@
 * Strategy Tracker End
 */
 
-/*
-* Tabbed Component primary styles
-*/
-.card-container-primary > .ant-tabs-card > .ant-tabs-content {
-    margin-top: -16px;
-  }
-.card-container-primary > .ant-tabs-card > .ant-tabs-content > .ant-tabs-tabpane {
-    background: #fff;
-    padding: 16px;
-  }
-  
-  .card-container-primary > .ant-tabs-card > .ant-tabs-bar {
-    border-color: #fff;
-  }
-  
-  .card-container-primary > .ant-tabs-card > .ant-tabs-bar .ant-tabs-tab {
-    border-color: transparent;
-    background: transparent;
-  }
-  
-  .card-container-primary > .ant-tabs-card > .ant-tabs-bar .ant-tabs-tab-active {
-    border-color: #fff;
-    background: #fff;
-  }
-/*
-* Tabbed component styles end
-*/
+
 
 @media screen and (max-width:500px){
   .content_layout_container{

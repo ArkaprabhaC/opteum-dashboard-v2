@@ -1,13 +1,14 @@
 import React, {Component, Fragment} from 'react'
-import { Menu, Button, Drawer,Icon } from 'antd';
+import { Menu, Button, Drawer,Icon,Tabs } from 'antd';
 import 'antd/dist/antd.css';
-
+import { connect } from 'react-redux';
 import './CustomMenu.css';
+
+const { TabPane } = Tabs;
 
 class CustomMenu extends Component {
     state = {
         visible: false,
-        width: window.innerWidth
     }
     showDrawer = () => {
         this.setState({
@@ -20,29 +21,21 @@ class CustomMenu extends Component {
         });
     };
 
-    menu = () => {
-        return (
-            <Menu>
-                <Menu.Item key="0">
-                    Profile
-                </Menu.Item>
-                <Menu.Divider />
-                <Menu.Item key="3">
-                    Sign Out
-                </Menu.Item>
-            </Menu>
-        )
-    }
     componentDidMount() {
         window.addEventListener('resize', this.handleWindowSizeChange);
     }
     
     handleWindowSizeChange = () => {
-        this.setState({ width: window.innerWidth });
+        //this.setState({ width: window.innerWidth });
+        this.props.dispatch({type: 'screen_resize'});
+    };
+
+    handleNavClick = (index) =>{
+        this.props.dispatch({type: 'mob_nav_change', val: index});
     };
 
     render(){
-        const { width } = this.state;
+        const width  = this.props.screen_width;
         const isMobile = width <= 500;
         const options = ['Sign Out','Dashboard','Profile', 'Performance Reporting', 'Support'];
         const optionsMob = ['dashboard','compass', 'fund'];
@@ -50,7 +43,7 @@ class CustomMenu extends Component {
 
         if(isMobile){
             markup = optionsMob.map((el,index)=>{
-                return <Menu.Item key={index+'_mob'}><Icon style={{fontSize: "20px",margin: 0}} type={el} theme="twoTone" /></Menu.Item>
+                return <Menu.Item onClick={()=>this.handleNavClick(index)} key={index+'_mob'}><Icon style={{fontSize: "20px",margin: 0}} type={el} theme="twoTone" /></Menu.Item>
             })
         }else{
             markup = options.map((el,index)=>{
@@ -68,6 +61,7 @@ class CustomMenu extends Component {
                     selectedkeys="1"
                     style={{lineHeight:"50px", paddingRight: "20px", position:"fixed"}}
                 >
+
                    {markup}
                                     
                 </Menu>
@@ -99,4 +93,11 @@ class CustomMenu extends Component {
     
 }
 
-export default CustomMenu;
+const mapStateToProps = (state) => {
+    return {
+        screen_width: state.width,
+        selected_tab: state.mob_selected_tab
+    }
+}
+
+export default connect(mapStateToProps)(CustomMenu);
