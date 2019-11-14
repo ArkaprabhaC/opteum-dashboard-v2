@@ -34,7 +34,8 @@
 
 @media screen and (max-width: 600px){
     .card_margin{
-        margin-top: 8%;
+        margin-top: 0%;
+        margin-bottom:4%;
     }
     .card_footer_investmentreqd,
     .card_footer_avgprofit{

@@ -1,10 +1,8 @@
 import React, {Component, Fragment} from 'react'
-import { Menu, Button, Drawer,Icon,Tabs } from 'antd';
+import { Menu, Button, Drawer,Icon} from 'antd';
 import 'antd/dist/antd.css';
 import { connect } from 'react-redux';
 import './CustomMenu.css';
-
-const { TabPane } = Tabs;
 
 class CustomMenu extends Component {
     state = {

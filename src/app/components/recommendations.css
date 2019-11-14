@@ -39,6 +39,9 @@
 */
 
 @media screen and (max-width: 600px){
+  .greeter h2{
+    margin:0px
+  }
   .greeter h4{
     text-align: left;
     padding-left: 0px;
