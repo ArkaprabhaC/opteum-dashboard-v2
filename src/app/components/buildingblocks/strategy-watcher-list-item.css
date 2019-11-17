@@ -1,0 +1,27 @@
+.strategy_watcher_item{
+    width:100%;
+    border:1px solid #E0E0E0;
+    background-color:#c9ffb8;
+    padding:15px;
+}
+
+.item_head{
+    font-size:15px;
+    margin-bottom:5px;
+}
+
+.item_head span:nth-child(2){
+    float:right;
+    position:relative;
+    font-size:20px;
+    bottom:9px;
+    left:5px;
+}
+.cur_ltp{
+    margin-bottom:5px;
+}
+.item_info{
+    margin-bottom:5px;
+    font-weight:600;
+    font-size:12px;
+}

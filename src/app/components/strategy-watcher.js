@@ -1,16 +1,22 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import './strategy-watcher.css'
+import StrategyWatcherItems from './buildingblocks/strategy-watcher-list-item'
 
 const Watcher = () => {
     return (
-        <main style={{ margin:"30px", height: "calc( 100vh - 140px)", backgroundColor: "#fff", borderRadius: "5px"}}>
-            <div style={{padding:"25px", marginBottom:"20px", borderBottom:"1px solid #D0D0D0"}}>
-                <p style={{marginBottom:"5px", fontSize:"17px", fontWeight: "600"}}>Live Strategy Tracker</p>
-                <div style={{height:"5px", width:"70px", backgroundColor: "#33ff00"}}/>
+        <main className="strategy_watcher_main">
+            <div className="strategy_watcher_header">
+                <p className="strategy_watcher_title">Live Strategy Tracker</p>
+                <div className="line"/>
             </div>
 
-            <div>
-
+            <div className="strategy_watcher_cards">
+                <StrategyWatcherItems id="1024" instrument="RELIANCE" currentLTP="773.33" date="10 Aug 2019" lotSize="33333" LTP="373.455"/>
+                <StrategyWatcherItems id="1024" instrument="RELIANCE" currentLTP="773.33" date="10 Aug 2019" lotSize="33333" LTP="373.455"/>
+                <StrategyWatcherItems id="1024" instrument="RELIANCE" currentLTP="773.33" date="10 Aug 2019" lotSize="33333" LTP="373.455"/>
+                <StrategyWatcherItems id="1024" instrument="RELIANCE" currentLTP="773.33" date="10 Aug 2019" lotSize="33333" LTP="373.455"/>
+                <StrategyWatcherItems id="1024" instrument="RELIANCE" currentLTP="773.33" date="10 Aug 2019" lotSize="33333" LTP="373.455"/>
+                <StrategyWatcherItems id="1024" instrument="RELIANCE" currentLTP="773.33" date="10 Aug 2019" lotSize="33333" LTP="373.455"/>
             </div>
         </main>
     );

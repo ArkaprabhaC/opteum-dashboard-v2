@@ -63,9 +63,11 @@ class CustomMenu extends Component {
                    {markup}
                                     
                 </Menu>
-                <Button className="barsMenu" type="primary" onClick={this.showDrawer}>
-                    Menu
-                </Button>
+                <button className="barsMenu" onClick={this.showDrawer}>
+                    <div className="bar"/>
+                    <div className="bar"/>
+                    <div className="bar"/>
+                </button>
                 <Drawer
                     title="Opteum TM"
                     placement="right"

@@ -47,7 +47,28 @@
 /*
 * Strategy Tracker End
 */
+/*
+* Scrollbar style
+*/
+::-webkit-scrollbar {
+  width: 6px;
+  position: relative;
+  z-index: 1000;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 50px;
+  
+}
+::-webkit-scrollbar-track {
+  background: #ddd;
+  border-radius: 50px;
+}
 
+/*
+* Scrollbar style end
+*/
 
 
 @media screen and (max-width:500px){
