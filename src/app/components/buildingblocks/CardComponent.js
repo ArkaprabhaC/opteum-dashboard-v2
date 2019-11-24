@@ -19,10 +19,10 @@ const CardComponent = (props) =>{
     return(  
       <Col md={24} xs={24} className="card_margin">
         <Card title="RELIANCE" extra={<span>Spot: {props.spot}</span>}> 
-            <Table dataSource={props.children} columns={columns} pagination={false} scroll={{ x: 2250, y: 350 }}/>
+            <Table dataSource={props.children} columns={columns} pagination={false} scroll={{ x: 800 }}/>
             <div>
                 <span className="card_footer_investmentreqd">Investment: <strong>Rs {props.investment_reqd}</strong> </span>
-                <span className="card_footer_avgprofit">Projected avg profit: <strong>{props.avg_profit}</strong> </span>
+                <span className="card_footer_avgprofit">Proj. avg profit: <strong>{props.avg_profit}</strong> </span>
             </div>
         </Card>
       </Col>        
