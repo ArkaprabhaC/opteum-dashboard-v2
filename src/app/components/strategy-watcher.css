@@ -1,5 +1,4 @@
 .strategy_watcher_main{
-    margin:30px 30px 10px 30px;
     background-color: #fff;
     border-radius: 5px;
     overflow: hidden;
@@ -14,7 +13,7 @@
     font-weight: 600;
 }
 .strategy_watcher_cards{
-    height:calc(100vh - 180px);
+    height:calc(100vh - 100px);
     overflow-y:auto;
 }
 .line{

@@ -1,6 +1,7 @@
 const initState = {
     width: window.innerWidth,
-    mob_selected_tab: 0
+    mob_selected_tab: 0,
+    checked_checkBox:false 
 }
 const reducer = (oldState = initState, action) => {
     //Think later
@@ -22,6 +23,13 @@ const reducer = (oldState = initState, action) => {
 
         //console.log('mob selected tab is '+newState.mob_selected_tab);
     }
+    if(action.type === 'CHECKBOX_CHANGE'){
+        newState = {
+            ...oldState,
+            checked_checkBox: !oldState.checked_checkBox
+        }
+    }
+
     return newState;
 }
 

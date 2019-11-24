@@ -34,11 +34,8 @@ class App extends Component{
         }else{
             return (
                 <Row>
-                    <Col md={14}>
+                    <Col>
                        <Recommendations/>                                    
-                    </Col>
-                    <Col md={10}>
-                        <Watcher/>
                     </Col>
                 </Row>
             )
@@ -50,16 +47,17 @@ class App extends Component{
             <Layout style={{boxSizing: "border-box"}}>
                 <CustomMenu/>
                 <Layout>
-                    <Sider className="sidebar" breakpoint="md" collapsedWidth="0" width="230px" style={{paddingTop: "18px"}}>
+                    <Sider className="sidebar sidebar-left" breakpoint="md" collapsedWidth="0" width="230px" style={{paddingTop: "18px"}}>
                         <Trends/>
                     </Sider>
-                    <Layout className="content_layout_container">
-                        <Content> 
+                    <Content className="content_container"> 
                             <div className="main_content">
                                 {this.content()}
                             </div>
-                        </Content>                        
-                    </Layout>
+                    </Content>
+                    <Sider className="sidebar sidebar-right" breakpoint="md" collapsedWidth="0" width="280px" style={{paddingTop: "18px"}}>
+                        <Watcher/>
+                    </Sider>                        
                 </Layout>
                 
           </Layout>

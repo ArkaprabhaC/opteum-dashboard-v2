@@ -59,7 +59,7 @@ class CustomMenu extends Component {
                     selectedkeys="1"
                     style={{lineHeight:"50px", paddingRight: "20px", position:"fixed"}}
                 >
-
+                    <Menu.Item key="redir_home" style={{float:"left"}}><strong>Opteum <span style={{color:"#33ff00"}}>Beta</span> </strong></Menu.Item>
                    {markup}
                                     
                 </Menu>
