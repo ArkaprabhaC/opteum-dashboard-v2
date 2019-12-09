@@ -1,8 +1,20 @@
 import React from 'react'
 import './strategy-watcher.css'
 import StrategyWatcherItems from './buildingblocks/strategy-watcher-list-item'
+import {connect} from 'react-redux';
 
-const Watcher = () => {
+const strategy_watcher_markup = (props) => {
+   if(props.items.length !== 0){
+     return props.items.map((el,index)=>{
+        return el.map((inner_el,inner_index) => {
+            return <StrategyWatcherItems details={inner_el} key={inner_el+inner_index}/>
+        })
+    })
+   }else{
+     return <p>Please add some elements</p>
+   }
+}
+const Watcher = (props) => {
     return (
         <main className="strategy_watcher_main">
             <div className="strategy_watcher_header">
@@ -11,15 +23,15 @@ const Watcher = () => {
             </div>
 
             <div className="strategy_watcher_cards">
-                <StrategyWatcherItems id="1024" instrument="RELIANCE" currentLTP="773.33" date="10 Aug 2019" lotSize="33333" LTP="373.455"/>
-                <StrategyWatcherItems id="1024" instrument="RELIANCE" currentLTP="773.33" date="10 Aug 2019" lotSize="33333" LTP="373.455"/>
-                <StrategyWatcherItems id="1024" instrument="RELIANCE" currentLTP="773.33" date="10 Aug 2019" lotSize="33333" LTP="373.455"/>
-                <StrategyWatcherItems id="1024" instrument="RELIANCE" currentLTP="773.33" date="10 Aug 2019" lotSize="33333" LTP="373.455"/>
-                <StrategyWatcherItems id="1024" instrument="RELIANCE" currentLTP="773.33" date="10 Aug 2019" lotSize="33333" LTP="373.455"/>
-                <StrategyWatcherItems id="1024" instrument="RELIANCE" currentLTP="773.33" date="10 Aug 2019" lotSize="33333" LTP="373.455"/>
+                {strategy_watcher_markup(props)}
+                
             </div>
         </main>
     );
 }
-
-export default Watcher;
+const mapStateToProps = (state) => {
+    return{
+      items: state.live_strategy_tracker_items
+    }
+}
+export default connect(mapStateToProps)(Watcher);

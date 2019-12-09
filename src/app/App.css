@@ -60,8 +60,8 @@
 * Scrollbar style
 */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 3px;
+  height: 3px;
   position: relative;
   z-index: 1000;
 }

@@ -55,7 +55,7 @@ class App extends Component{
                                 {this.content()}
                             </div>
                     </Content>
-                    <Sider className="sidebar sidebar-right" breakpoint="md" collapsedWidth="0" width="280px" style={{paddingTop: "18px"}}>
+                    <Sider className="sidebar sidebar-right" breakpoint="md" collapsedWidth="0" width="280px" >
                         <Watcher/>
                     </Sider>                        
                 </Layout>

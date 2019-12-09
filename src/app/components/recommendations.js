@@ -4,6 +4,7 @@ import 'antd/dist/antd.css';
 import './recommendations.css';
 import { Tabs } from 'antd';
 import TabbedComponent from './buildingblocks/TabbedComponent';
+import CardContainer from './buildingblocks/CardContainer';
 const { TabPane } = Tabs;
 
 const Recommendations = () => {
@@ -14,16 +15,8 @@ const Recommendations = () => {
                 <Col sm={14}><h4>5 November 2019 | Data updated at: <strong>22:30</strong></h4></Col>
             </Row>
                                         
-            <div className="card-container-primary">
-                <Tabs type="card">
-                    {[...Array(4).keys()].map(i => {
-                        return (
-                            <TabPane tab={`Tab ${i+1}`} key={`${i+1}`}>
-                                <TabbedComponent/>
-                            </TabPane> );
-                    })}
-                </Tabs>
-            </div>
+            <CardContainer/>
+            
        </Fragment> 
     );
 }
